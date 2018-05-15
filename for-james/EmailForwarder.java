@@ -23,7 +23,7 @@ public class EmailForwarder extends GenericMailet {
                 String userName = recipient.getLocalPart();
 
 				// call the REST service
-                String mailAddr = forwardEmailProvider.getEmail(userName); 
+                String mailAddr = ForwardEmailProvider.getEmail(userName); 
                 if(mailAddr==null) {
                     log("forward Email is null for user:"+userName);
                 } else {
